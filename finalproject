@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>1924</title>
+</head>
+<body id="myBody">
+<button id="halt">Halt</button>
+<button id="turnLeft">turnLeft</button>
+<button id="turnRight">turnRight</button>
+<button id="turnRight1">turnRight1</button>
+<!-- <button id="dejacoltranekenzoButton">dejacoltranekenzo</button> -->
+
+<script>
+console.log('start script');
+haltButton = document.getElementById("halt");
+haltButton.addEventListener("click",halt);
+
+function halt(e){
+console.log("halt",e);
+fetch("https://bot3.seattleacademy.software/drive?left=0&right=0");
+}
+
+
+turnLeftButton = document.getElementById("turnLeft");
+turnLeftButton.addEventListener("click",turnLeft);
+
+function turnLeft(e){
+console.log("turnLeft",e);
+fetch("https://bot3.seattleacademy.software/drive?left=200&right=0");
+}
+
+
+turnRightButton = document.getElementById("turnRight");
+turnRightButton.addEventListener("click",turnRight);
+
+function turnRight(e){
+console.log("turnRight",e);
+fetch("https://bot3.seattleacademy.software/drive?left=0&right=200");
+}
+turnRight1Button = document.getElementById("turnRight1");
+turnRight1Button.addEventListener("click",turnRight1);
+
+function turnRight1(e){
+console.log("turnRight1",e);
+fetch("https://bot3.seattleacademy.software/drive?left=500&right=-500");
+}
+
+// dejacoltranekenzoButton = document.getElementById("dejacoltranekenzoButton");
+// dejacoltranekenzoButton.addEventListener("click",dejacoltranekenzoButton);
+
+// function dejacoltranekenzoButton(e){
+// console.log("dejacoltranekenzo",e);
+// fetch("https://bot3.seattleacademy.software/drive?left=-500&right=500");
+// }
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
